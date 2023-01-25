@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8"/>
+<!--<link rel="stylesheet" type="text/css" href="interface.css" media="screen">
+<link type="text/html" href="../../indexPrimario.html">-->
+<title>ANÁLISE E MODELAGEM DE DADOS</title>
+
+<style>
+
+  *{margin: 0; padding: 0;}
+  
+  body
+  {
+      background-color: #00aeff;
+      font-family: arial, helvetica, sans-serif;
+  }
+  
+  .posTela
+  {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgb(0, 7, 73);
+      padding: 5px;
+      border-radius: 15px;
+      width: 75%;
+      height: 75%;
+  }
+  
+  /*.divBox
+  {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgb(255, 145, 0);
+      padding: 5px;
+      border-radius: 15px;
+      width: 75%;
+      height: 75%;
+  }*/
+  
+  .posBotaoProx
+  {
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 96%;
+      left: 96%;
+      transform: translate(-80%,-80%);
+      cursor: pointer;
+  }
+  
+  .posBotaoAnt
+  {
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 96%;
+      left: 6%;
+      transform: translate(-80%,-80%);
+      cursor: pointer;
+  }
+  
+  .youtube
+  {
+      color: rgb(0, 0, 0);
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 96%;
+      left: 50%;
+      transform: translate(-80%,-80%);
+  }
+  
+  .pagInicial
+  {
+      top: 4%;
+      left: 94%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      color: rgb(0, 0, 0);
+      border-radius: 15px;
+      padding: 8px;
+  }
+  
+  .pagInicial:hover
+  {
+      top: 4%;
+      left: 94%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      /*color: rgb(0, 0, 0);*/
+      /*border-radius: 15px;*/
+      padding: 8px;
+  
+      color: blanchedalmond;
+      border-radius: 15px;
+      cursor: pointer;
+      background-image: linear-gradient(90deg, rgb(147,230,10), rgb(31, 51, 0));
+  }
+  
+  .textoH1
+  {
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 4%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+  
+  .textoH2
+  {
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 9%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+  
+  .textoH12
+  {
+      font-size: 36px;
+      color: rgb(0, 0, 0);
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 6%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+  
+  .youtube:hover
+  {
+      color: blanchedalmond;
+      /*background-color: rgb(0, 1, 78);*/
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 96%;
+      left: 50%;
+      transform: translate(-80%,-80%);
+      cursor: pointer;
+      background-image: linear-gradient(90deg, rgb(147,230,10), rgb(31, 51, 0));
+  }
+  
+  .posBotaoProx:hover
+  {
+      color: blanchedalmond;
+      /*background-color: rgb(0, 1, 78);*/
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 96%;
+      left: 96%;
+      transform: translate(-80%,-80%);
+      cursor: pointer;
+      background-image: linear-gradient(90deg, rgb(147,230,10), rgb(31, 51, 0));
+  }
+  
+  .posBotaoAnt:hover
+  {
+      color: blanchedalmond;
+      /*background-color: rgb(0, 1, 78);*/
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 96%;
+      left: 6%;
+      transform: translate(-80%,-80%);
+      cursor: pointer;
+      background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 29, 43));
+  }
+  
+  .menu
+  {
+      color: rgb(0, 0, 0);
+      margin: 0;
+      padding: 0;
+      list-style:none;
+      border:2px solid #000000;
+      /*border: none;*/
+      float:left;
+      /*font-family: arial, helvetica, sans-serif;*/
+      /*top: 6%;
+      left: 5%;
+      transform: translate(-50%,-50%);
+      position: absolute;*/
+  }
+  
+  .opMenu
+  {
+  
+      top: 3%;
+      left: 2.4%;
+      /*left: 2.4%;*/
+      transform: translate(-50%,-50%);
+      position: absolute;
+  }
+  
+  .opMenu2
+  {
+  
+      top: 3%;
+      left: 4%;
+      /*left: 2.4%;*/
+      transform: translate(-50%,-50%);
+      position: absolute;
+  }
+  
+  .menu li
+  {
+      position:relative;
+      float:left;
+      list-style: none;
+      border-right:1px solid #696969;
+  }
+  
+  /*Esconder Menu*/
+  .menu li  ul{
+      position:absolute;
+      /*top:25px;*/
+      top:6%;
+      left:0;
+      background-color:#fff;
+      display:none;
+  }
+  
+  .menu li a
+  {
+      /*color:#333; */
+      color:rgb(0, 0, 0);
+      text-decoration:none; 
+      padding:5px 10px; 
+      display:block;
+  }
+  
+  .menu li input
+  {
+      /*color:#333; */
+      border: none;
+      color:rgb(0, 0, 0);
+      text-decoration:none; 
+      padding:5px 10px; 
+      display:block;
+      font-size: 16px;
+  }
+  
+  .menu li a:hover{
+  /*background:#333;*/
+  background-image: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 29, 43));
+  /*color:#fff;*/
+  color:rgb(231, 237, 241);
+  /*-moz-box-shadow:0 3px 10px 0 #CCC;*/
+  /*-webkit-box-shadow:0 3px 10px 0 #ccc;*/
+  text-shadow:0px 0px 5px #fff;
+  }
+  
+  .menu li ul li{
+      border:1px solid #c0c0c0;
+      display:block;
+      width:150px;
+  }
+  
+  /**/
+  /*Mostrar Menu*/
+  .menu li:hover ul, .menu li.over ul
+  {
+      position: absolute;
+      display:block;
+      top: 108%;
+      left: -1%;
+  }
+  
+  .Teste
+  {
+      color: rgb(0, 0, 0);
+      border-radius: 15px;
+      padding: 8px;
+      position: absolute;
+      top: 6%;
+      left: 80%;
+      transform: translate(-50%,-50%);
+  }
+  
+  /*.posBotaoProx::-webkit-input-placeholder
+  {
+  
+  }*/
+  </style>
+
+</head>
+
+<body>
+<!-- Conteúdo -->
+
+<h1 class="textoH1">ANÁLISE E MODELAGEM DE DADOS</h1>
+<h2 class="textoH2">PLAYLIST COMPLETA YOUTUBE</h2>
+<!-- BLOCO DE MENU -->
+<nav class="opMenu2">
+  <ul class="menu">
+      <li><a href="#">Disciplinas</a>
+          <ul>
+              <li><a href="indexModelDados.html">ANÁLISE E MODELAGEM DE DADOS</a></li>
+              <li><a href="indexModelDados.html">ANÁLISE E MODELAGEM DE DADOS</a></li>
+              <li><a href="indexEngSoft.html">ENGENHARIA DE SOFTWARE</a></li>
+                <li><a href="indexAlgProgEstrut.html">ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA</a></li>
+                <li><a href="indexLogicComp.html">LÓGICA COMPUTACIONAL</a></li>
+            </ul>
+      </li>
+  </ul>
+</nav>
+<!-- FIM BLOCO DE MENU -->
+<!-- <iframe class="posTela" width="560" height="315" src="https://www.youtube.com/watch?v=A73vLUGv8bU&list=PLDUmO0VUsIgg9j-MnsytVcErmAZnhpFzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+<iframe class="posTela" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLDUmO0VUsIgg9j-MnsytVcErmAZnhpFzT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<form>
+    <input class="pagInicial" type="button" onclick="window.location.href='indexhomepage.html'" value="INÍCIO">
+</form>
+
+</body>
+
+</html>
+
+
+<!--                                >>>RECURSOS NÃO UTILIZADOS<<<
+
+-->
